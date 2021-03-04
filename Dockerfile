@@ -40,7 +40,7 @@ RUN apt-get update -y \
  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Add bazel using bazelisk
-RUN curl -Lo /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.7.4/bazelisk-linux-amd64 \
+RUN curl -Lo /usr/local/bin/bazel https://github.com/bazelbuild/bazel/releases/download/4.0.0/bazel-4.0.0-linux-arm64 \
  && chmod +x /usr/local/bin/bazel       \
  && export PATH=$PATH:/usr/local/bin/   \
  && alias bazel=/usr/local/bin/bazel    \

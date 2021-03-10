@@ -13,6 +13,9 @@ jobs:
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
+      - name: checkout code
+        uses: actions/checkout@v2
+
       - name: Publish Image to Container Registry
         uses: ripplr-io/docr-docker-publish@v1
         with:
